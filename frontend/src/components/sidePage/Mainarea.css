@@ -1,0 +1,41 @@
+.main-container {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  background-color: #eaf1f6;
+}
+
+.sidebar-container {
+  width: 260px;
+  height: 100%;
+  background-color: transparent; /* Handled by Sidebar's gradient */
+  transition: all 0.3s ease-in-out;
+}
+
+.chat-container {
+  flex-grow: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: #f8f9fa;
+}
+
+/* === Responsive for Mobile View === */
+@media (max-width: 768px) {
+  .main-container {
+    flex-direction: column;
+    height: auto; /* Allow natural height */
+  }
+
+  .sidebar-container {
+    width: 100%;
+    height: auto;
+    min-height: 200px;
+  }
+
+  .chat-container {
+    width: 100%;
+    height: calc(100vh - 200px); /* Adjust based on sidebar height */
+  }
+}
