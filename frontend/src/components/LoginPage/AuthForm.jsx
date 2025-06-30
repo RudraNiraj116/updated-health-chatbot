@@ -28,7 +28,7 @@ const AuthForm = ({ setUser }) => {
     const endpoint = isLogin ? "/api/auth/login" : "/api/auth/signup";
 
     try {
-      const res = await fetch(`http://localhost:5000${endpoint}`, {
+      const res = await fetch(`https://updated-health-chatbot-server.onrender.com${endpoint}`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
